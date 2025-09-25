@@ -8,7 +8,7 @@
     "start": "node server.js",
     "dev": "nodemon server.js",
     "scrape": "node scraper.js",
-      "postinstall": "npx puppeteer browsers install chrome"
+        "postinstall": "npx puppeteer browsers install chrome"
   },
   "keywords": ["attendance", "api", "mis", "mobile"],
   "author": "Your Name",
