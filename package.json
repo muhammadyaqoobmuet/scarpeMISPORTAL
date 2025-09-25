@@ -7,8 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "scrape": "node scraper.js"
-   
+    "scrape": "node scraper.js",
+      "heroku-prebuild": "echo 'Skipping Chromium download for Puppeteer'",
+  "postinstall": "PUPPETEER_SKIP_DOWNLOAD=true"
   },
   "keywords": [
     "attendance",
