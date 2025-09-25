@@ -13,9 +13,10 @@ export async function scrapeAttendanceData() {
     const password = process.env.MIS_PASSWORD ;
     
    const browser = await puppeteer.launch({
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
   headless: true,
-  executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
+  executablePath:
+    process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
 });
 
     const page = await browser.newPage();
