@@ -13,8 +13,7 @@ export async function scrapeAttendanceData() {
     const password = process.env.MIS_PASSWORD;
 
     browser = await puppeteer.launch({
-  executablePath: process.env.GOOGLE_CHROME_BIN || "/usr/bin/google-chrome",
- 
+  executablePath: process.env.GOOGLE_CHROME_FOR_TESTING_BIN,
   args: ["--no-sandbox", "--disable-setuid-sandbox"],
   headless: true
 });
