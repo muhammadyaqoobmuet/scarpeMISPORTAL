@@ -1,0 +1,51 @@
+[
+  {
+    "subjectName": "DSS",
+    "conducted": "35",
+    "attended": "27",
+    "missed": "8",
+    "percentage": "77%"
+  },
+  {
+    "subjectName": "DS-A",
+    "conducted": "31",
+    "attended": "25",
+    "missed": "6",
+    "percentage": "81%"
+  },
+  {
+    "subjectName": "DS-A Lab",
+    "conducted": "27",
+    "attended": "24",
+    "missed": "3",
+    "percentage": "89%"
+  },
+  {
+    "subjectName": "MAD",
+    "conducted": "27",
+    "attended": "18",
+    "missed": "9",
+    "percentage": "67%"
+  },
+  {
+    "subjectName": "MAD Lab",
+    "conducted": "39",
+    "attended": "39",
+    "missed": "0",
+    "percentage": "100%"
+  },
+  {
+    "subjectName": "TSW",
+    "conducted": "20",
+    "attended": "16",
+    "missed": "4",
+    "percentage": "80%"
+  },
+  {
+    "subjectName": "SPM",
+    "conducted": "34",
+    "attended": "26",
+    "missed": "8",
+    "percentage": "76%"
+  }
+]
