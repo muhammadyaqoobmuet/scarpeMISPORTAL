@@ -12,20 +12,11 @@ export async function scrapeAttendanceData() {
     const cnic = process.env.MIS_CNIC ;
     const password = process.env.MIS_PASSWORD ;
     
-    browser = await puppeteer.launch({
-      headless: true,
-      args: [
-        "--no-sandbox", 
-        "--disable-setuid-sandbox",
-        "--disable-dev-shm-usage",
-        "--disable-gpu",
-        "--disable-extensions",
-        "--no-first-run",
-        "--disable-default-apps"
-      ],
-      defaultViewport: null,
-      
-    });
+   const browser = await puppeteer.launch({
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  headless: true,
+  executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
+});
 
     const page = await browser.newPage();
 
