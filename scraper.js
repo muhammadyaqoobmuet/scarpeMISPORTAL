@@ -1,4 +1,4 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 import fs from "node:fs";
 import dotenv from "dotenv";
 
@@ -13,10 +13,11 @@ export async function scrapeAttendanceData() {
     const password = process.env.MIS_PASSWORD;
 
     browser = await puppeteer.launch({
-      headless: true,
-      args: ["--no-sandbox", "--disable-setuid-sandbox"],
-      executablePath: puppeteer.executablePath(), // 👈 Option 2
-    });
+  executablePath: process.env.GOOGLE_CHROME_BIN || "/usr/bin/google-chrome",
+
+  args: ["--no-sandbox", "--disable-setuid-sandbox"],
+  headless: true
+});
 
     const page = await browser.newPage();
 
