@@ -9,8 +9,8 @@ export async function scrapeAttendanceData() {
   try {
     console.log("🔄 Starting attendance scrape...");
     
-    const cnic = process.env.MIS_CNIC || "43403-0417666-3";
-    const password = process.env.MIS_PASSWORD || "passwd123A.#";
+    const cnic = process.env.MIS_CNIC ;
+    const password = process.env.MIS_PASSWORD ;
     
     browser = await puppeteer.launch({
       headless: true,
