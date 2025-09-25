@@ -5,19 +5,14 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export async function scrapeAttendanceData() {
-  let browser;
-  try {
-    console.log("🔄 Starting attendance scrape...");
-    
-    const cnic = process.env.MIS_CNIC ;
-    const password = process.env.MIS_PASSWORD ;
-    
-   const browser = await puppeteer.launch({
-  args: ["--no-sandbox", "--disable-setuid-sandbox"],
-  headless: true,
-  executablePath:
-    process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
-});
+ let browser;
+try {
+  browser = await puppeteer.launch({
+    args: ["--no-sandbox", "--disable-setuid-sandbox"],
+    headless: true,
+    executablePath:
+      process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
+  });
 
     const page = await browser.newPage();
 
